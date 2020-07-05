@@ -84,6 +84,15 @@ namespace LTCSDL.BLL
             ship.Phone = req.Phone;
             return _rep.UpdateShippADO(ship);
         }
+        //Câu 3 LINQ đề 4
+        public Shippers UpdateShip_LINQ(ShippersReq req)
+        {
+            Shippers ship = new Shippers();
+            ship.ShipperId = req.Id;
+            ship.CompanyName = req.CompanyName;
+            ship.Phone = req.Phone;
+            return _rep.UpdateShip_LINQ(ship);
+        }
         //Câu 4 đề 4
         public object DSShipper_LINQ(int thang, int nam)
         {

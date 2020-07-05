@@ -87,12 +87,12 @@ namespace LTCSDL.DAL
                             Fax = row["Fax"],
                             HomePage = row["HomePage"],
                         };
-                        res = (x);
+                        res = x;
                     }
                 }
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 res = null;
             }
@@ -154,7 +154,7 @@ namespace LTCSDL.DAL
                             Fax = row["Fax"],
                             HomePage = row["HomePage"],
                         };
-                        res = (x);
+                        res = x;
                     }
                 }
 
@@ -209,6 +209,21 @@ namespace LTCSDL.DAL
         }
 
         // câu 3 Linq đề 4(chưa làm được)
+        public Shippers UpdateShip_LINQ(Shippers ship)
+        {
+            Shippers res = Context.Shippers.Where(x => x.ShipperId == ship.ShipperId)
+                .FirstOrDefault();
+
+            
+            res.CompanyName = ship.CompanyName;
+            res.Phone = ship.Phone;
+
+            Context.SaveChanges();
+
+            return res;
+        }
+
+
         //câu 4 đề 4
         public object DSShipper_LINQ(int thang, int nam)
         {

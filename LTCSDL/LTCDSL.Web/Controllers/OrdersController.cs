@@ -19,35 +19,10 @@ namespace LTCSDL.Web.Controllers
             _svc = new OrdersSvc();
         }
         private readonly OrdersSvc _svc;
-        // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
 
       
-
-        // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
         //câu 2 a đề 2
-        [HttpPost("xuất danh sách đơn hàng")]
+        [HttpPost("danh-sach-don-hang-trong-khoan-thoi-gian")]
         public IActionResult XuatDSDonHang([FromBody] DateBeginEndReq req)
         {
             var res = new SingleRsp();
@@ -55,7 +30,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         //Câu 2 b đề 2
-        [HttpPost("xuất chi tiết đơn hàng")]
+        [HttpPost("chi-tiet-don-hang")]
         public IActionResult ChiTietDonHang([FromBody] IntReq req)
         {
             var res = new SingleRsp();
@@ -63,7 +38,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         //Câu 3 a đề 2
-        [HttpPost("Xuất danh sách đơn hàng LINQ")]
+        [HttpPost("danh-sach-don-hang-LINQ")]
         public IActionResult XuatDSDonHang_Linq([FromBody] DateBeginEndReq req)
         {
             var res = new SingleRsp();
@@ -72,7 +47,7 @@ namespace LTCSDL.Web.Controllers
         }
 
         //Câu 3 b đề 2
-        [HttpPost("Xuất chi tiết đơn hàng LINQ")]
+        [HttpPost("chi-tiet-don-hang-LINQ")]
         public IActionResult ChiTietDonHang_Linq([FromBody] IntReq req)
         {
             var res = new SingleRsp();
@@ -80,7 +55,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         // Câu 2 a đề 3
-        [HttpPost("xuất danh sách dơn hàng theo tên nhân viên")]
+        [HttpPost("danh-sach-don-hang-theo-ten-nhan-vien")]
         public IActionResult DanhSachDonHang([FromBody] TenNhanVienReq req)
         {
             var res = new SingleRsp();
@@ -89,7 +64,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         // Câu 2 b đề 3
-        [HttpPost("xuất danh sách mặt hàng bán chạy")]
+        [HttpPost("danh-sach-mat-hang-ban-chay")]
         public IActionResult MatHangBanChay([FromBody] MatHangReq req)
         {
             var res = new SingleRsp();
@@ -98,7 +73,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         //Câu 3 đề 3
-        [HttpPost("Thêm record Shippers")]
+        [HttpPost("them-record-shiper")]
         public IActionResult InsertShippADO([FromBody] ShipperInsertReq req)
         {
             var res = new SingleRsp();
@@ -106,6 +81,27 @@ namespace LTCSDL.Web.Controllers
             res.Data = hist;
             return Ok(res);
         }
+
+
+        //Câu 4a đề 3
+        [HttpPost("danh-sach-don-hang-theo-ten-nhan-vien-LINQ")]
+        public IActionResult DanhSachDonHang_LINQ([FromBody] TenNhanVienReq req)
+        {
+            var res = new SingleRsp();
+            res = _svc.DanhSachDonHang_LINQ(req.tenNhanVien, req.dateBegin, req.dateEnd, req.page, req.size);
+            return Ok(res);
+        }
+
+
+        //Câu 4b đề 3
+        [HttpPost("danh-thu-theo-quoc-gia-LINQ")]
+        public IActionResult DoanhThuTheoQuocGia_LINQ([FromBody] MonthYearReq req)
+        {
+            var res = new SingleRsp();
+            res = _svc.DoanhThuTheoQuocGia_LINQ(req.month, req.year);
+            return Ok(res);
+        }
+
     }
 }
  

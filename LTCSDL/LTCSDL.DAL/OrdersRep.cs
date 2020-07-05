@@ -73,7 +73,7 @@ namespace LTCSDL.DAL
         public object ChiTietDonHang(int maDonHang)
 
         {
-            object res = new object();
+            List<object> res = new List<object>();
             var cnn = (SqlConnection)Context.Database.GetDbConnection();
             if (cnn.State == ConnectionState.Closed)
                 cnn.Open();
@@ -95,22 +95,13 @@ namespace LTCSDL.DAL
                     {
                         var x = new
                         {
-                            OrderID = row["OrderID"],
-                            CustomerID = row["CustomerID"],
-                            EmployeeID = row["EmployeeID"],
-                            OrderDate = row["OrderDate"],
-                            RequiredDate = row["RequiredDate"],
-                            ShippedDate = row["ShippedDate"],
-                            ShipVia = row["ShipVia"],
-                            Freight = row["Freight"],
-                            ShipName = row["ShipName"],
-                            ShipAddress = row["ShipAddress"],
-                            ShipCity = row["ShipCity"],
-                            ShipRegion = row["ShipRegion"],
-                            ShipPostalCode = row["ShipPostalCode"],
-                            ShipCountry = row["ShipCountry"],
+                            OrderId = row["OrderId"],
+                            ProductId = row["ProductId"],
+                            UnitPrice = row["UnitPrice"],
+                            Quantity = row["Quantity"],
+                            Discount = row["Discount"],
                         };
-                        res = (x);
+                        res.Add(x);
                     }
                 }
 
@@ -125,23 +116,20 @@ namespace LTCSDL.DAL
         //Câu 3 a đề 2
         public object XuatDSDonHang_Linq(DateTime dateBegin, DateTime dateEnd)
         {
-            var res = All.Where(x => x.OrderDate >= dateBegin && x.OrderDate <= dateEnd);
-            var data = res.OrderBy(x => x.OrderDate).ToList();
-            return new
-            {
-                Data = data
-            };
+            var res = All.Where(x => x.OrderDate >= dateBegin && x.OrderDate <= dateEnd)
+                           .OrderBy(x => x.OrderDate).ToList();
+
+            return res;
         }
 
         //Câu 3 b đề 2
         public object ChiTietDonHang_Linq(int maDonHang)
         {
-            var res = All.Where(x => x.OrderId == maDonHang);
-            var data = res.OrderBy(x => x.OrderId).ToList();
-            return new
-            {
-                Data = data
-            };
+            var res = Context.OrderDetails
+                .Where(x => x.OrderId == maDonHang)
+                .OrderBy(x => x.OrderId)
+                .ToList();
+            return res;
         }
         //Câu 2 a đề 3
         public List<object> DanhSachDonHang(String tenNhanVien, DateTime dateBegin, DateTime dateEnd, int page, int size)
@@ -300,8 +288,68 @@ namespace LTCSDL.DAL
             }
             return x;
         }
-        //Câu 4  đề 3
+        //Câu 4a  đề 3
+        public object DanhSachDonHang_LINQ(String tenNhanVien, DateTime dateBegin, DateTime dateEnd, int page, int size)
+        {
+            var order = All.Join(Context.Employees, a => a.EmployeeId, b => b.EmployeeId, (a, b) => new
+            {
+                a.OrderId,
+                a.EmployeeId,
+                a.OrderDate,
+                b.LastName,
+
+            }).Where(x => x.LastName.Equals(tenNhanVien) && x.OrderDate >= dateBegin && x.OrderDate <= dateEnd)
+            .Select(x=> new
+            {
+                OrderId = x.OrderId,
+                EmployeeId = x.EmployeeId,
+                OrderDate = x.OrderDate,
+                LastName = x.LastName,
+            }).ToList();
+
+            var offset = (page - 1) * size;
+            var total = order.Count();
+            int totalPage = (total % size) == 0 ? (int)(total / size) : (int)((total / size) + 1);
+            var data = order.OrderBy(x => x.LastName).Skip(offset).Take(size).ToList();
+
+            var res = new
+            {
+                Data = data,
+                TotalRecord = total,
+                TotalPage = totalPage,
+                Page = page,
+                Size = size,
+            };
+
+            return res;
+        }
+
+
+        //Câu 4b đề 3
+        public object DoanhThuTheoQuocGia_LINQ(int thang,int nam)
+        {
+            var data = All.Join(Context.OrderDetails, a => a.OrderId, b => b.OrderId, (a, b) => new
+            {
+                a.ShipCountry,
+                a.OrderDate,
+                DT = b.UnitPrice * b.Quantity * (1 - (decimal)b.Discount)
+            }).Where(x => ((DateTime)x.OrderDate).Month == thang && ((DateTime)x.OrderDate).Year == nam)
+            .ToList();
+
+            var res = data.GroupBy(x => x.ShipCountry)
+                .Select(x => new
+                {
+                    ShipCountry = x.First().ShipCountry,
+                    DoanhThu = x.Sum(x=>x.DT)
+                })
+                .OrderBy(x=>x.DoanhThu);
+            
+
+            return res;
+        }
         
-      
+
+
+
     }
 }

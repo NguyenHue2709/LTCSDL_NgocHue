@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Đề Số 5</h1>
+
+<p>This component demonstrates Đề số 5 from the server.</p>
+
+<p *ngIf="!loadSuccess"><em>Loading...</em></p>
+
+
+<h3>Danh Sách Doanh Thu Shippers</h3>
+<input type = "date"[(ngModel)] = "datef"/>
+<input type = "date"[(ngModel)] = "datel"/>
+<button (click) = "soLuongHangHoaCanGiao(datef,datel)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="loadSuccess">
+  <thead>
+    <tr>
+      <th>Required Date</th>
+      <th>So Luong Hang Hoa</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hanghoa of dsSoLuongHangHoa">
+      <td>{{ hanghoa.requiredDate }}</td>
+      <td>{{ hanghoa.soLuongHangHoa }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div id="barchart_material" style="width: 1200px; height: 500px;"></div>
+

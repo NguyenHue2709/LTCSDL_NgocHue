@@ -1,0 +1,53 @@
+<h1 id="tableLabel">Employees</h1>
+
+<p>This component demonstrates Employees from the server.</p>
+
+<p *ngIf="!loadSuccess"><em>Loading...</em></p>
+
+
+<h3>Danh Thu Trong Ngày</h3>
+<input type = "date" [(ngModel)] = "date"/>
+<button (click) = "layDanhSachNhanVien(date)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="loadSuccess">
+  <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Doanh Thu Trong Ngay</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Employee of DSDoanhThuNhanVien">
+      <td>{{ Employee.employeeId }}</td>
+      <td>{{ Employee.lastName }}</td>
+      <td>{{ Employee.firstName }}</td>
+      <td>{{ Employee.doanhThuTrongNgay }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Doanh Thu Trong Khoản Thời Gian</h3>
+<input type = "date" [(ngModel)] = "datef"/>
+=>
+<input type = "date" [(ngModel)] = "datel"/>
+<button (click) = "doanhThuTrongKhoangThoiGian(datef,datel)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="loadSuccess">
+  <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Doanh Thu Trong Ngay</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Employee of DSDoanhThuTrongKhoangThoiGian">
+      <td>{{ Employee.employeeId }}</td>
+      <td>{{ Employee.lastName }}</td>
+      <td>{{ Employee.firstName }}</td>
+      <td>{{ Employee.doanhThu }}</td>
+    </tr>
+  </tbody>
+</table>

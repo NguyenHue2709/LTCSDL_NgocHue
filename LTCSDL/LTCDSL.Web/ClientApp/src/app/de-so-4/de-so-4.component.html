@@ -1,0 +1,35 @@
+<h1 id="tableLabel">Employees</h1>
+
+<p>This component demonstrates Employees from the server.</p>
+
+<p *ngIf="!loadSuccess"><em>Loading...</em></p>
+
+
+<h3>Danh Sách Doanh Thu Shippers</h3>
+<input type = "number" placeholder="Tháng" [(ngModel)] = "month"/>
+<input type = "number" placeholder="Năm" [(ngModel)] = "year"/>
+<button (click) = "doanhThuShippers(month,year)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="loadSuccess">
+  <thead>
+    <tr>
+      <th>shipperId</th>
+      <th>companyName</th>
+      <th>phone</th>
+      <th>shippedDate</th>
+      <th>tien</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let shipper of dsShippers">
+      <td>{{ shipper.shipperId }}</td>
+      <td>{{ shipper.companyName }}</td>
+      <td>{{ shipper.phone }}</td>
+      <td>{{ shipper.shippedDate }}</td>
+      <td>{{ shipper.tien }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div id="piechart" style="width: 700px; height: 700px;"></div>
+

@@ -36,9 +36,8 @@ go
 
 
 --Câu 1 c đề 5
-alter  proc TimKiemOrder(
-		@companyName nvarchar(50),
-		@employeeName nvarchar(50),
+create  proc TimKiemOrder(
+		@keyWord nvarchar(20),
 		@page int,
 		@size int
 )
@@ -50,17 +49,21 @@ begin
 	set @begin = (@page -1) * @size + 1;
 	set @end = @page *@size;
 	with s as
-		(SELECT ROW_NUMBER() over(order by OrderID) as STT, OrderID ,Orders.CustomerID, Orders.EmployeeID, LastName, CompanyName
-			from Orders, Employees, Customers
-			where Orders.CustomerID = Customers.CustomerID
-			and Orders.EmployeeID = Employees.EmployeeID
-			and @employeeName = LastName
-			and @companyName = CompanyName)
+		(SELECT ROW_NUMBER() over(order by OrderID) as STT, OrderID ,a.CustomerID, a.EmployeeID, LastName, CompanyName
+			from Orders a inner join Employees b
+			on a.EmployeeID = b.EmployeeID
+			inner join Customers c 
+			on a.CustomerID = c.CustomerID
+			where  b.LastName like '%' + @keyWord + '%'
+				or c.CompanyName like '%' + @keyWord + '%'
+
+				)
 
 		select * from s
 			where STT between @begin and @end
 end
 go
+
 
 exec TimKiemOrder 'Vins et alcools Chevalier', 'Buchanan', 1,5
 

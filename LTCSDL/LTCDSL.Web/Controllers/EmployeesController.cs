@@ -21,7 +21,7 @@ namespace LTCSDL.Web.Controllers
         private readonly EmployeesSvc _svc;
 
         //Câu 2 a đế 1
-        [HttpPost("Doanh thu Nhân viên")]
+        [HttpPost("doanh-thu-nhan-vien")]
         public IActionResult DoanhThuNhanVien([FromBody] DateReq req)
         {
             var res = new SingleRsp();
@@ -30,7 +30,7 @@ namespace LTCSDL.Web.Controllers
         }
 
          //Câu 2 b đề 1
-        [HttpPost("Doanh thu Nhân viên trong khoảng thời gian")]
+        [HttpPost("doanh-thu-nhan-vien-trong-thoi-gian")]
         public IActionResult DoanhThuNhanVienTrongThoiGian([FromBody] DateBeginEndReq req)
         {
             var res = new SingleRsp();
@@ -38,7 +38,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         //Câu 3 a đề 1
-        [HttpPost("Doanh thu Nhân viên LINQ")]
+        [HttpPost("doanh-thu-nhan-vien-LINQ")]
         public IActionResult getDTNVTrongNgay_Linq([FromBody] DateReq req)
         {
             var res = new SingleRsp();
@@ -46,7 +46,7 @@ namespace LTCSDL.Web.Controllers
             return Ok(res);
         }
         // câu 3 b đề 1
-        [HttpPost("Doanh thu Nhân viên Trong khoảng thời gian LINQ")]
+        [HttpPost("doanh-thu-nhan-vien-trong-khoan-thoi-gian-LINQ")]
         public IActionResult DoanhThuNhanVienTrongThoiGian_LINQ([FromBody] DateBeginEndReq req)
         {
             var res = new SingleRsp();

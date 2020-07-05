@@ -25,7 +25,7 @@ namespace LTCSDL.BLL
             return _rep.TimKiemOrder(companyName,employeeName, page, size);
         }
         // Câu 3 đề 5 ADO thêm record cho bảng Products
-        public Products InsertProductADO(ProdInsertReq req)
+        public object InsertProductADO(ProdInsertReq req)
         {
             Products prod = new Products();
             prod.ProductName = req.ProductName;
@@ -41,9 +41,34 @@ namespace LTCSDL.BLL
         }
 
         //Câu 4 đề 5 linq
-        public object GetDSDonHangDe5_Linq(DateTime date)
+        public object GetDSDonHangDe5_Linq(int day, int month, int year, int page, int size)
         {
-            return _rep.getDSDonHangDe5_Linq(date);
+            return _rep.getDSDonHangDe5_Linq(day, month, year, page, size);
         }
+
+        //Câu 3 đề 5 thêm record cho bảng Products bằng LINQ
+        public SingleRsp InsertProductLINQ(ProdInsertReq req)
+        {
+            Products prod = new Products();
+            prod.ProductName = req.ProductName;
+            prod.SupplierId = req.SupplierId;
+            prod.CategoryId = req.CategoryId;
+            prod.QuantityPerUnit = req.QuantityPerUnit;
+            prod.UnitPrice = req.UnitPrice;
+            prod.UnitsInStock = req.UnitsInStock;
+            prod.UnitsOnOrder = req.UnitsOnOrder;
+            prod.ReorderLevel = req.ReorderLevel;
+            prod.Discontinued = req.Discontinued;
+            return _rep.InsertProductLINQ(prod);
+        }
+
+        //Câu 5 đề 5
+        public SingleRsp dsSoLuongHangHoaCanGiaoTrongNgay(DateTime datef, DateTime datel)
+        {
+            var res = new SingleRsp();
+            res.Data = _rep.dsSoLuongHangHoaCanGiaoTrongNgay(datef, datel);
+            return res;
+        }
+
     }
 }

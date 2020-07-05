@@ -13,12 +13,16 @@ CREATE PROCEDURE DsNhanVienTrongNgay
 AS
 BEGIN
 	
-	SELECT Employees.EmployeeID, Employees.LastName, Employees.FirstName, sum (UnitPrice*Quantity*(1-Discount)) as DoanhThuTrongNgay
-	from Employees , [Order Details], Orders
-	where Employees.EmployeeID = Orders.EmployeeID
-		and [Order Details].OrderID = Orders.OrderID
-		and OrderDate = @date
-		group by  Employees.EmployeeID, Employees.LastName, Employees.FirstName
+	SELECT a.EmployeeID, a.LastName, a.FirstName, sum (UnitPrice*Quantity*(1-Discount)) as DoanhThuTrongNgay
+	from Employees a inner join Orders b
+	on a.EmployeeID = b.EmployeeID
+	inner join [Order Details] c 
+	on b.OrderID = c.OrderID
+	where
+		DAY(OrderDate) = DAY(@date) 
+		and MONTH(OrderDate) = MONTH(@date)
+		and YEAR(OrderDate) = YEAR(@date)
+		group by  a.EmployeeID, a.LastName, a.FirstName
 END
 GO
 exec DsNhanVienTrongNgay '1996-7-5'

@@ -3,9 +3,7 @@ go
 -- Câu 1c--Nhập vào từ khóa để tìm kiếm Supplier theo Companyname, Country
 
 alter proc DanhSachSupplier
-	(@tenCT nvarchar(50),
-
-	@quocGia nvarchar(50),
+	(@keyword nvarchar(20),
 	@page int,
 	@size int)
 as
@@ -19,9 +17,9 @@ begin
 	with s as
 		(select ROW_NUMBER() over(order by SupplierID) as STT , SupplierID, CompanyName, Country
 		from Suppliers
-		where @tenCT = CompanyName
-			and @quocGia = Country
-		group by SupplierID, CompanyName, Country)
+		where Country like '%'+ @keyword + '%'
+		or CompanyName like '%'+ @keyword + '%'
+		)
 		select * from s
 			where STT between @begin and @end
 end

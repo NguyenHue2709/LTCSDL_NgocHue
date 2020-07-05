@@ -56,5 +56,24 @@ namespace LTCSDL.BLL
             ship.Phone = req.Phone;
             return _rep.InsertShippADO(ship);
         }
+
+        //Câu 4a đề 3
+        public SingleRsp DanhSachDonHang_LINQ(String tenNhanVien, DateTime dateBegin, DateTime dateEnd, int page, int size)
+        {
+            var res = new SingleRsp();
+            var m = _rep.DanhSachDonHang_LINQ(tenNhanVien, dateBegin, dateEnd, page, size);
+            res.Data = m;
+            return res;
+        }
+
+        //Câu 4b đề 3
+        public SingleRsp DoanhThuTheoQuocGia_LINQ(int thang, int nam)
+        {
+            var res = new SingleRsp();
+            var m = _rep.DoanhThuTheoQuocGia_LINQ(thang, nam);
+            res.Data = m;
+            return res;
+        }
+
     }
 }

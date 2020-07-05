@@ -1,0 +1,78 @@
+<h1 id="tableLabel">Orders De 1</h1>
+
+<p>This component demonstrates Orders De 3 from the server.</p>
+
+<p *ngIf="!loadSuccess"><em>Loading...</em></p>
+
+<h3>Doanh Sách Đơn Hàng Trong Khoản Thời Gian</h3>
+<input type = "date" [(ngModel)] = "datef"/>
+=>
+<input type = "date" [(ngModel)] = "datel"/>
+<button (click) = "layDanhSachDonHangTrongKhoanThoiGian(datef,datel)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="loadSuccess">
+  <thead>
+    <tr>
+      <th>order ID</th>
+      <th>customer ID</th>
+      <th>employee ID</th>
+      <th>order Date</th>
+      <th>required Date</th>
+      <th>shipped Date</th>
+      <th>ship Via</th>
+      <th>freight</th>
+      <th>ship Name</th>
+      <th>ship Address</th>
+      <th>ship City</th>
+      <th>ship Region</th>
+      <th>ship PostalCode</th>
+      <th>ship Country</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of DSDonHangTrongKhoangThoiGian">
+      <td>{{ order.orderID }}</td>
+      <td>{{ order.customerID }}</td>
+      <td>{{ order.employeeID }}</td>
+      <td>{{ order.orderDate }}</td>
+      <td>{{ order.requiredDate }}</td>
+      <td>{{ order.shippedDate }}</td>
+      <td>{{ order.shipVia }}</td>
+      <td>{{ order.freight }}</td>
+      <td>{{ order.shipName }}</td>
+      <td>{{ order.shipAddress }}</td>
+      <td>{{ order.shipCity }}</td>
+      <td>{{ order.shipRegion }}</td>
+      <td>{{ order.shipPostalCode }}</td>
+      <td>{{ order.shipCountry }}</td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Chi Tiết Đơn Hàng</h3>
+<p>Mã đơn hàng</p>
+<input type = "number" [(ngModel)] = "madon"/>
+<button (click) = "layChiTietDonHang(madon)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel">
+  <thead>
+    <tr>
+      <th>OrderId</th>
+      <th>ProductId</th>
+      <th>UnitPrice</th>
+      <th>Quantity</th>
+      <th>Discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let donHang of chiTietDonHang">
+      <td>{{ donHang.orderId }}</td>
+      <td>{{ donHang.productId }}</td>
+      <td>{{ donHang.unitPrice }}</td>
+      <td>{{ donHang.quantity }}</td>
+      <td>{{ donHang.discount }}</td>
+    </tr>
+  </tbody>
+</table>
+

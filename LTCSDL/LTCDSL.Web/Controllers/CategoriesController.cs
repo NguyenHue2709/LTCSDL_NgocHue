@@ -46,7 +46,7 @@ namespace LTCSDL.Web.Controllers
 
         }
         // Câu 3 đề 4
-        [HttpPost("Cập nhật record Shippers")]
+        [HttpPost("cap-nhap-record-shipper")]
         public IActionResult UpdateShippADO([FromBody] ShippersReq req)
         {
             var res = new SingleRsp();
@@ -54,8 +54,19 @@ namespace LTCSDL.Web.Controllers
             res.Data = hist;
             return Ok(res);
         }
+
+        // Câu 3 LINQ đề 4
+        [HttpPost("cap-nhap-record-shipper-LINQ")]
+        public IActionResult UpdateShip_LINQ([FromBody] ShippersReq req)
+        {
+            var res = new SingleRsp();
+            var hist = _svc.UpdateShippADO(req);
+            res.Data = hist;
+            return Ok(res);
+        }
+
         // Câu 4 đề 4
-        [HttpPost("Danh sách Shippers LINQ")]
+        [HttpPost("danh-sach-shipper-LINQ")]
         public IActionResult DSShipper_LINQ([FromBody] ThangNamReq req)
         {
             var res = new SingleRsp();

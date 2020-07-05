@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.BLL\\LTCSDL.BLL.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.BLL\\LTCSDL.BLL.csproj": {}
   },
   "projects": {
-    "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.BLL\\LTCSDL.BLL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.BLL\\LTCSDL.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.BLL\\LTCSDL.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.BLL\\LTCSDL.BLL.csproj",
         "projectName": "LTCSDL.BLL",
-        "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.BLL\\LTCSDL.BLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.BLL\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.BLL\\LTCSDL.BLL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj": {
-                "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj"
+              "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj"
               },
-              "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\LTCSDL.DAL.csproj": {
-                "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\LTCSDL.DAL.csproj"
+              "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\LTCSDL.DAL.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\LTCSDL.DAL.csproj"
               }
             }
           }
@@ -65,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj": {
+    "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj",
         "projectName": "LTCSDL.Common",
-        "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,21 +123,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\LTCSDL.DAL.csproj": {
+    "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\LTCSDL.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\LTCSDL.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\LTCSDL.DAL.csproj",
         "projectName": "LTCSDL.DAL",
-        "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\LTCSDL.DAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\LTCSDL.DAL.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,8 +150,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj": {
-                "projectPath": "D:\\LapTrinhCSDL\\LTCSDL-192\\LTCSDL.Common\\LTCSDL.Common.csproj"
+              "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\LTCSDL_NgocHue\\LTCSDL\\LTCSDL.Common\\LTCSDL.Common.csproj"
               }
             }
           }
@@ -195,7 +195,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

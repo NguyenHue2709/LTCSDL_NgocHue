@@ -6,9 +6,7 @@ namespace LTCSDL.Common.Req
 {
     public class DateReq
     {
-        public DateTime date
-        {
-            get; set;
-        }
+        public DateTime date { get; set; }
+
     }
 }

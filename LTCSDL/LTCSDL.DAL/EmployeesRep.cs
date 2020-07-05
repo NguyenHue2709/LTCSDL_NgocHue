@@ -19,7 +19,7 @@ namespace LTCSDL.DAL
         public object DoanhThuNhanVien(DateTime date)
 
         {
-            object res = new object();
+            List<object> res = new List<object>();
             var cnn = (SqlConnection)Context.Database.GetDbConnection();
             if (cnn.State == ConnectionState.Closed)
                 cnn.Open();
@@ -46,7 +46,7 @@ namespace LTCSDL.DAL
                             FirstName = row["FirstName"],
                             DoanhThuTrongNgay = row["DoanhThuTrongNgay"],
                         };
-                        res = (x);
+                        res.Add(x);
                     }
                 }
 

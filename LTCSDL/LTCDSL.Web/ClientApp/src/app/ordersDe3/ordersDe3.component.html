@@ -1,0 +1,64 @@
+<h1 id="tableLabel">Orders De 3</h1>
+
+<p>This component demonstrates Orders De 3  from the server.</p>
+
+<p *ngIf="!loadSuccess"><em>Loading...</em></p>
+
+<h3>Danh Sách Đơn Hàng Theo Tên Nhân Viên</h3>
+<input type = "text" placeholder="Ten Nhan Vien" [(ngModel)] = "tenNV"/>
+<input type = "date" [(ngModel)] = "datef"/>
+=>
+<input type = "date" [(ngModel)] = "datel"/>
+<button (click) = "layDanhSachDonHangTheoTenNhanVien(tenNV,datef,datel,1)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel">
+  <thead>
+    <tr>
+      <th>orderId</th>
+      <th>employeeId</th>
+      <th>orderDate</th>
+      <th>lastName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let donHang of DSDonHangTrongKhoangThoiGianTheoTenNhanVien">
+      <td>{{ donHang.orderId }}</td>
+      <td>{{ donHang.employeeId }}</td>
+      <td>{{ donHang.orderDate }}</td>
+      <td>{{ donHang.lastName }}</td>
+    </tr>
+  </tbody>
+</table>
+<ul class="pagination" *ngIf = "page != null">
+  <li class="page-item">
+    <a href="javascript:void(0);" (click) = "trangTruoc()">Trước</a>
+  </li>
+  <li class="page-item">
+    {{page}}
+  </li>
+  <li class="page-item">
+    <a href="javascript:void(0);" (click) = "trangTiep()">sau</a>
+  </li>
+</ul>
+
+
+<input type = "number" placeholder="Tháng" [(ngModel)] = "month"/>
+<input type = "number" placeholder="Năm" [(ngModel)] = "year"/>
+<button (click) = "layDoanhThuTheoQuocGia(month,year)">Tìm</button>
+<table class='table table-striped' aria-labelledby="tableLabel">
+  <thead>
+    <tr>
+      <th>ship Country</th>
+      <th>doanh Thu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let quocgia of DSDoanhThuQuocGia">
+      <td>{{ quocgia.shipCountry }}</td>
+      <td>{{ quocgia.doanhThu }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div id="piechart" style="width: 700px; height: 700px;"></div>
+

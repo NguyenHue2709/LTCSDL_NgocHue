@@ -108,7 +108,7 @@ namespace LTCSDL.DAL
         /// Initialize
         /// </summary>
         // Câu 2 b đề 4 
-        public object UpdateSuplier(String companyName, String contactName, String contactTitle, String address, String city,
+        public object UpdateSuplier(int id,String companyName, String contactName, String contactTitle, String address, String city,
          String region, String postalCode, String country, String phone, String fax, String homePage)
 
         {
@@ -121,8 +121,9 @@ namespace LTCSDL.DAL
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataSet ds = new DataSet();
                 var cmd = cnn.CreateCommand();
-                cmd.CommandText = "ThemRecord ";
+                cmd.CommandText = "CapNhatSuppliers";
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@companyName", companyName);
                 cmd.Parameters.AddWithValue("@contactName", contactName);
                 cmd.Parameters.AddWithValue("@contactTitle", contactTitle);
@@ -142,6 +143,7 @@ namespace LTCSDL.DAL
                     {
                         var x = new
                         {
+                            SupplierID = row["SupplierID"],
                             CompanyName = row["CompanyName"],
                             ContactName = row["ContactName"],
                             ContactTitle = row["ContactTitle"],

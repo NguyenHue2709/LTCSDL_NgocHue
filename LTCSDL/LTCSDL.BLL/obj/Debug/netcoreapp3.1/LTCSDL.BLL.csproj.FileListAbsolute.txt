@@ -39,3 +39,17 @@ C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.csproj.CopyComplete
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.dll
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.BLL.deps.json
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.BLL.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.BLL.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.Common.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.DAL.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.Common.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\bin\Debug\netcoreapp3.1\LTCSDL.DAL.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.csprojAssemblyReference.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.csproj.CoreCompileInputs.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.AssemblyInfoInputs.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.AssemblyInfo.cs
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.csproj.CopyComplete
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.BLL\obj\Debug\netcoreapp3.1\LTCSDL.BLL.pdb

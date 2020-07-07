@@ -72,7 +72,7 @@ namespace LTCSDL.BLL
         #endregion
         public object GetUpdateSupplier(SuppliersReq req)
         {
-            return _rep.UpdateSuplier(req.CompanyName, req.ContactName, req.ContactTitle, req.Address, req.City,
+            return _rep.UpdateSuplier(req.SupplierId, req.CompanyName, req.ContactName, req.ContactTitle, req.Address, req.City,
                 req.Region, req.PostalCode, req.Country, req.Phone, req.Fax, req.HomePage);
         }
         //Câu 3 đề 4

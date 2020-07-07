@@ -20,7 +20,7 @@ alter proc ChiTietDonHang(
 as
 begin
 	select *
-	from Orders
+	from [Order Details]
 	where OrderID = @maDonHang
 end
 go

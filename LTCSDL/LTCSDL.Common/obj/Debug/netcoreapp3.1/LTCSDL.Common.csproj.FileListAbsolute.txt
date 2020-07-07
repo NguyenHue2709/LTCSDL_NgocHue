@@ -24,3 +24,12 @@ C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.dll
 C:\Users\Admin\Desktop\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\bin\Debug\netcoreapp3.1\LTCSDL.Common.deps.json
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\bin\Debug\netcoreapp3.1\LTCSDL.Common.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\bin\Debug\netcoreapp3.1\LTCSDL.Common.pdb
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.csprojAssemblyReference.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.csproj.CoreCompileInputs.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.AssemblyInfoInputs.cache
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.AssemblyInfo.cs
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.dll
+E:\LTCSDL_NgocHue\LTCSDL\LTCSDL.Common\obj\Debug\netcoreapp3.1\LTCSDL.Common.pdb

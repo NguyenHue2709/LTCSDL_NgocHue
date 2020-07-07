@@ -18,6 +18,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
+-- Câu 1 a đề 3
 Alter PROCEDURE DSDonHangDe3 
 	(@tenNhanVien nvarchar(50),
 	@dateBegin datetime,
